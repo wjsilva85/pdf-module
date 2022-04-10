@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>PDF File</title>
+    <style type="text/css" media="screen">
+      .title {
+        color: red;
+      }
+      .header {
+        display: flex;
+        justify-content: center;
+      }
+
+      .container {
+        margin: 20px;
+      }
+
+      span {
+        background-color: darkblue;
+        color: yellow;
+
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <%- include('./budget-partials/coverages')%>
+      <%-include('./budget-partials/clauses')%>
+    </div>
+  </body>
+</html>

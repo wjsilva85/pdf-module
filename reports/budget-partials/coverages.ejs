@@ -1,0 +1,19 @@
+<div class="header">
+  <h3 class="title">Coberturas Contratadas</h3>
+</div>
+
+<div>
+  <table>
+    <tr>
+      <th>Descrição</th>
+      <th>Valor</th>
+    </tr>
+
+    <%coverages.forEach(coverage => {%>
+    <tr>
+      <td><%=coverage.description%></td>
+      <td><%=coverage.value%></td>
+    </tr>
+    <%})%>
+  </table>
+</div>
