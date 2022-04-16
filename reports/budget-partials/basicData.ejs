@@ -1,0 +1,40 @@
+<section class="basicData">
+  <%basicData.beneficiaryList.forEach((beneficiary, index) => {%>
+
+  <div class="basicDataItem">
+    <div class="basicDataLabel">Nome pretendente <%=index+1%>:</div>
+    <div class="basicLabelContent"><%=beneficiary.name%></div>
+  </div>
+
+  <div class="basicDataItem">
+    <div class="basicDataLabel">CPF <%=index+1%>:</div>
+    <div class="basicLabelContent"><%=beneficiary.cpf%></div>
+  </div>
+
+  <%})%>
+
+  <div class="basicDataItem">
+    <div class="basicDataLabel">Endereço do Imóvel:</div>
+    <div class="basicLabelContent">
+      <%=basicData.riskAddress.street%>, <%=basicData.riskAddress.number%>,
+      <%=basicData.riskAddress.complement%> -
+      <%=basicData.riskAddress.neighborhood%>, <%=basicData.riskAddress.city%> -
+      <%=basicData.riskAddress.estate%>, <%=basicData.riskAddress.zipcode%>
+    </div>
+  </div>
+  <div class="basicDataItem">
+    <div class="basicDataLabel">Finalidade do Imóvel:</div>
+    <div class="basicLabelContent"><%=basicData.contractDestination%></div>
+  </div>
+  <div class="basicDataItem">
+    <div class="basicDataLabel">Personalidade:</div>
+    <div class="basicLabelContent"><%=basicData.documentType%></div>
+  </div>
+  <div class="basicDataItem">
+    <div class="basicDataLabel">Prazo do contrato de locação:</div>
+    <div class="basicLabelContent">
+      <%=basicData.durationInMonth%> meses (favor nos comunicar no caso de
+      alteração)
+    </div>
+  </div>
+</section>

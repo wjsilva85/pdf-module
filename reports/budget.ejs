@@ -3,17 +3,14 @@
   <head>
     <meta charset="utf-8" />
     <title>PDF File</title>
-    <style type="text/css" media="screen">
+    <style type="text/css">
       .title {
-        color: red;
+        font-size: 14px;
+        text-align: center;
       }
       .header {
         display: flex;
         justify-content: center;
-      }
-
-      .container {
-        margin: 20px;
       }
 
       span {
@@ -22,11 +19,49 @@
 
         font-weight: bold;
       }
+
+      .paragraph {
+        text-align: justify;
+        font-size: 12px;
+      }
+
+      .logos {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+      section {
+        margin-bottom: 20px;
+      }
+
+      .basicDataItem {
+        display: flex;
+        padding-top: 5px;
+      }
+
+      .basicDataLabel {
+        width: 200px;
+      }
+
+      .basicData {
+        margin-top: 15px;
+      }
     </style>
   </head>
   <body>
     <div class="container">
-      <%- include('./budget-partials/coverages')%>
+      <section><%- include('./budget-partials/header') %></section>
+      <section><%-include('./budget-partials/date') %></section>
+
+      <section><%-include('./budget-partials/broker') %></section>
+      <section>
+        <div class="subject">
+          Assunto: Aprovação e Orçamento de Seguro Fiança Locatícia
+        </div>
+        <div class="bailId">Proposta: <%=bailId%></div>
+      </section>
+      <%-include('./budget-partials/basicData')%>
+      <%-include('./budget-partials/coverages')%>
       <%-include('./budget-partials/clauses')%>
     </div>
   </body>
